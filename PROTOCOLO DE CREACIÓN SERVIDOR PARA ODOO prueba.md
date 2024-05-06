@@ -6,7 +6,7 @@ Cada técnico tiene creado un proyecto en el que poder crear servidores. Las car
 
 ### a. Gestión de procesos y Gestión de clientes
 
-El servidor para los clientes que haya contratado el servicio de gestión de clientes (KDGC) o el servicio de gestión de procesos (KDGP) contarán con un servidor propio con las siguientes características:
+El servidor para los clientes que hayan contratado el servicio de gestión de clientes (KDGC) o el servicio de gestión de procesos (KDGP) contarán con un servidor propio con las siguientes características:
 
 - Location: Falkenstein
 
@@ -42,7 +42,7 @@ Para crear un servidor debemos pulsar en el botón "Add Server" y nos llevará a
 
 ![](images/2024-05-06-11-57-55-image.png)
 
-Ejemplo de configuración del servidor (Aquellas configuraciones que no aparezcan significará que se dejará sin configurar)
+Ejemplo de configuración del servidor (Aquellas configuraciones que no aparezcan significará que se dejarán sin configurar)
 
 ![](images/2024-05-02-12-32-57-image.png)
 
@@ -52,11 +52,11 @@ Ejemplo de configuración del servidor (Aquellas configuraciones que no aparezca
 
 ![](images/2024-05-02-12-48-03-image.png)
 
-El siguiente pantallazo corresponde a los grupos, recordad 10 servidores por grupos. Podeis dejarle el nombre que os da Hetzner por defecto. 
+El siguiente pantallazo corresponde a los grupos, recordad 10 servidores por grupos. Podéis dejarle el nombre que os da Hetzner por defecto. 
 
 ![](images/2024-05-02-12-35-06-image.png)
 
-Si no habeis creado nunca un grupo debereis seleccionar "Create placement group" para crear el grupo
+Si no habéis creado nunca un grupo debéis seleccionar "Create placement group" para crear el grupo
 
 ![](images/2024-05-02-12-35-42-image.png)
 
@@ -97,9 +97,9 @@ Hemos comprado el dominio datacontrolodoo.es, para cada cliente tendremos que cr
 - Duplicatti
 1. ¿Cómo elegir el nombre del servidor cliente?
    
-   Para elegir el nombre del servidor se tiene que revisar si el cliente tiene dominio propio. Para ello se consultará la ficha de contacto y si el correo electrónico del cliente tiene una extensión de dominio personalizada será ese el nombre del servidor que se usará. Ejemplo, si un cliente tiene de correo electrónico info.comercial@dwits-prueba.com se deberá de utilizar su nombre de dominio "dwtis-prueba.com" para la creación de su servidor. En cambio, si el cliente no tiene ningún correo electrónico con extensión de dominio personalizada, el programador se deberá de "inventar" el nombre del servidor. Para ello se fijará en el nombre de la empresa y se usará para el nombre del servidor. Ejemplo, si un cliente tiene de correo info.comercial@gmail.com se deberá de "inventar" el nombre del servidor y, para ello, nos fijaremos en el nombre de la empresa que imaginemos que sea Digital Wolf It Solutions, S.L., para este caso un ejemplo de nombre de servidor podría ser DWITS. En cambio, si el nombre de la empresa es Francisco Montes Real pues un nombre de dominio podría ser FMR.
+   Para elegir el nombre del servidor se tiene que revisar si el cliente tiene dominio propio. Para ello se consultará la ficha de contacto y si el correo electrónico del cliente tiene una extensión de dominio personalizada será ese el nombre del servidor que se usará. Ejemplo, si un cliente tiene de correo electrónico info.comercial@dwits-prueba.com se deberá utilizar su nombre de dominio "dwtis-prueba.com" para la creación de su servidor. En cambio, si el cliente no tiene ningún correo electrónico con extensión de dominio personalizada, el programador se deberá de "inventar" el nombre del servidor. Para ello se fijará en el nombre de la empresa y se usará para el nombre del servidor. Ejemplo, si un cliente tiene de correo info.comercial@gmail.com se deberá "inventar" el nombre del servidor y, para ello, nos fijaremos en el nombre de la empresa que imaginemos que sea Digital Wolf It Solutions, S.L., para este caso un ejemplo de nombre de servidor podría ser DWITS. En cambio, si el nombre de la empresa es Francisco Montes Real pues un nombre de dominio podría ser FMR.
    
-   Una vez elegido el nombre del dominio deberemos de acceder al Excel que os facilitaremos para la creación del acrónimo, del nombre del servidor, de las DNS y de los registros A. 
+   Una vez elegido el nombre del dominio deberemos acceder al Excel que os facilitaremos para la creación del acrónimo, del nombre del servidor, de las DNS y de los registros A. 
    
    Os adjunto un pantallazo usando como ejemplo dwits-prueba:
    
@@ -109,7 +109,7 @@ Hemos comprado el dominio datacontrolodoo.es, para cada cliente tendremos que cr
    
    ![](images/2024-05-02-14-17-26-image.png)
 
-2. Cómo Crear los registros A en DONDOMINIO
+2. ¿Cómo Crear los registros A en DONDOMINIO?
 
 Accedemos a la siguiente URL: https://manage.panel247.com/login/
 Indicamos el nombre del dominio: datacontrolodoo.com, tu usuario y contraseña
@@ -155,7 +155,7 @@ sudo apt update && sudo apt upgrade
 
 Durante la instalación nos pedirá confirmación para proseguir con la instalación de las actualizaciones donde para proseguir debemos indicar que sí (Y).
 
-Una vez finalizada la tarea nos solicita que reiniciemos los servicios marcados para que el servidor utilice los nuevos paquetes, donde le diremos "Ok".
+Una vez finalizada la tarea, nos solicita que reiniciemos los servicios marcados para que el servidor utilice los nuevos paquetes, donde le diremos "Ok".
 
 ![](images/2024-05-02-14-35-50-image.png)
 
@@ -165,7 +165,7 @@ Si no os salierá esta ventana no os preocupeis, ya que salga o no esta ventana 
 reboot
 ```
 
-Una vez ejecutado el comando se desconectará nuestro terminal debiendo de conectarnos de nuevo. Importante, la contraseña de vuestro terminal seguira teniendo la contraseña que nos dio el servidor y que como recordareis la hemos cambiado, por ello os recomendamos que cambies el campo password con la nueva contraseña que le hemos indicado a nuestro servidor Ubuntu.
+Una vez ejecutado el comando se desconectará nuestro terminal debiendo  conectarnos de nuevo. Importante, la contraseña de vuestro terminal seguirá teniendo la contraseña que nos dio el servidor y que como recordaréis la hemos cambiado, por ello os recomendamos que se cambie el campo password con la nueva contraseña que le hemos indicado a nuestro servidor Ubuntu.
 
 ![](images/2024-05-02-14-49-10-image.png)
 
@@ -276,7 +276,7 @@ Después de instalar Docker usando el script, el proceso de instalación continu
 
 ![](images/2024-05-02-18-20-13-image.png)
 
-Al poner la IP con el puerto (49.13.214.246:9000) te pedirá que establezca una contraseña antes de entrar. Una vez dada, pulsamos en el botón "Crear usuario".
+Al poner la IP con el puerto (49.13.214.246:9000) te pedirá que establezcas una contraseña antes de entrar. Una vez dada, pulsamos en el botón "Crear usuario".
 
 ![](images/2024-05-02-18-27-07-image.png)
 
@@ -308,7 +308,7 @@ docker ps
 
 - **Crear el usuario rápidamente**: Completa el formulario de creación de usuario lo más pronto posible para evitar otro timeout.
 
-Una vez creado el usuario satisfactoriamente, se te redirigira la página al menú principal.
+Una vez creado el usuario satisfactoriamente, se te redirigirá la página al menú principal.
 
 ![](images/2024-05-02-18-38-27-image.png)
 
@@ -324,7 +324,7 @@ Una vez creado el usuario satisfactoriamente, se te redirigira la página al men
 
 3. **Creación de Stacks**: Una vez que el entorno está configurado, deberemos crear los diferentes stacks necesarios para la instación de Odoo y será el stack "Odoo 16"  y stack "NGinx".
    
-   Para ello debemos de volver al menú principal pulsando en "Home". Y en el menú principal accederemos al environments que se nos ha creado por defecto llamado "local", que es el mismo al que le acabamos de facilitar la IP.
+   Para ello debemos volver al menú principal pulsando en "Home". Y en el menú principal accederemos al environments que se nos ha creado por defecto llamado "local", que es el mismo al que le acabamos de facilitar la IP.
    
    ![](images/2024-05-02-18-47-17-image.png)
    
@@ -332,7 +332,7 @@ Una vez creado el usuario satisfactoriamente, se te redirigira la página al men
    
    ![](images/2024-05-02-18-53-03-image.png)
    
-   Al acceder, veremos que ya hay un stack creado  de forma predeterminada llamado "portainer" el cual permitira su administración, probablemente relacionado con la instancia de Portainer misma. Aquí, debes proceder a añadir más stacks para tus aplicaciones pulsando en el botón superior del extremo derecho llamado "+ Add Stack". 
+   Al acceder, veremos que ya hay un stack creado  de forma predeterminada llamado "portainer" el cual permitirá su administración, probablemente relacionado con la instancia de Portainer misma. Aquí, debes proceder a añadir más stacks para tus aplicaciones pulsando en el botón superior del extremo derecho llamado "+ Add Stack". 
    
    ![](images/2024-05-02-19-04-26-image.png)
    
@@ -369,7 +369,7 @@ Una vez creado el usuario satisfactoriamente, se te redirigira la página al men
    Después de instalar Odoo y otros servicios mediante stacks en Portainer, tu próxima tarea es enriquecer la funcionalidad de Odoo instalando módulos adicionales de la OCA (Odoo Community Association). Los módulos de la OCA aportan funcionalidades adicionales y mejoras comunitarias a las aplicaciones estándar de Odoo.
 
 2. **Preparación para la Instalación de Módulos**:
-   Antes de proceder con la instalación de los módulos OCA, necesitas preparar el entorno en el servidor donde se está ejecutando Odoo. Esto implica verificar el entorno y asegurarse de que todas las herramientas necesarias estén instaladas. Para ello cerramos nos desconectamos del servidor y nos volveriamos a conectar (cerrando previamente la terminal de la consola si la tuvieramos abierta).
+   Antes de proceder con la instalación de los módulos OCA, necesitas preparar el entorno en el servidor donde se está ejecutando Odoo. Esto implica verificar el entorno y asegurarse de que todas las herramientas necesarias estén instaladas. Para ello cerramos nos desconectamos del servidor y nos volveríamos a conectar (cerrando previamente la terminal de la consola si la tuvieramos abierta).
    
    - Cerramos consola
    
@@ -387,7 +387,7 @@ Una vez creado el usuario satisfactoriamente, se te redirigira la página al men
    
    ![](images/2024-05-05-12-47-49-image.png)
    
-   - A continuación, instala "Midnight Commander" (mc), un gestor de archivos basado en texto para Unix como Ubuntu. Midnight Commander es útil para navegar por los archivos de sistema de una manera más intuitiva que los comandos de terminal estándar. Durante la instalación te solicitará la instalación de varios paquetes adicionales donde le diremos que si lo instale (Y).
+   - A continuación, instala "Midnight Commander" (mc), un gestor de archivos basado en texto para Unix como Ubuntu. Midnight Commander es útil para navegar por los archivos de sistema de una manera más intuitiva que los comandos de terminal estándar. Durante la instalación te solicitará la instalación de varios paquetes adicionales donde le diremos que sí lo instale (Y).
    
    ```
    sudo apt install mc
@@ -409,7 +409,7 @@ Una vez ejecutado Midnight Commander, nos aparecerá una ventana como la siguien
 
 ![](images/2024-05-02-19-58-59-image.png)
 
-Como podeis observar la interfaz se divide principalmente en dos paneles que facilitan la gestión de archivos y directorios:
+Como podéis observar la interfaz se divide principalmente en dos paneles que facilitan la gestión de archivos y directorios:
 
 1. **Panel Izquierdo y Derecho**: Cada panel muestra el contenido de un directorio. Esto permite realizar operaciones de archivo como copiar o mover archivos entre directorios de una manera muy visual y directa. Puedes cambiar entre los paneles usando la tecla `Tab`.
 
@@ -428,7 +428,7 @@ Como podeis observar la interfaz se divide principalmente en dos paneles que fac
 
 3. **Línea de Comando**: Justo debajo de los dos paneles, hay una línea de comando donde puedes escribir comandos directamente, como si estuvieras en la terminal normal de Linux.
 
-Una vez explicada la interfaz procederemos a copiar el fichero "20. -odoo.conf" que lo encontraremos en el panel de la izquierda para ello deberemos de irnos al directorio superior del que nos encontramos y para ello debemos seleccionar "/..". Para acceder a el podamos darle directamente con el mouse de nuestro ratón. 
+Una vez explicada la interfaz procederemos a copiar el fichero "20. -odoo.conf" que lo encontraremos en el panel de la izquierda para ello debemos irnos al directorio superior del que nos encontramos y para ello debemos seleccionar "/..". Para acceder a el podamos darle directamente con el mouse de nuestro ratón. 
 
 ![](images/2024-05-02-20-19-55-image.png)
 
@@ -458,31 +458,31 @@ Para pegar la ruta solo debemos situarnos en el campo "to" y pulsar en el teclad
 
 ![](images/2024-05-02-20-49-23-image.png)
 
-Para comprobar que el archivo se ha copiado correctamente y cambiarle el nombre del archivo, accederemos en el panel derecho a la ruta data/compose/1/config/. Para acceder solo deberemos de ir pulsando con el ratón en los nombres de las carpetas que se indican en la ruta dada hasta llegar a donde debe de estar el archivo copiado.
+Para comprobar que el archivo se ha copiado correctamente y cambiarle el nombre del archivo, accederemos en el panel derecho a la ruta data/compose/1/config/. Para acceder solo debemos ir pulsando con el ratón en los nombres de las carpetas que se indican en la ruta dada hasta llegar a donde debe estar el archivo copiado.
 
 ![](images/2024-05-02-20-50-51-image.png)
 
-Para cambiar el nombre del archivo que se encuentra copiado en el panel de la derecha, nos situamos encima del archivo y pulsamos en el panel inferior el número 6 "RenMov" (o pulsando en el teclado F6). Seguidamente, nos aparecere una ventana de dialogo donde para cambiar el nombre eliminamos todo lo que nos aparece en el campo to y le ponemos lo siguiente: 
+Para cambiar el nombre del archivo que se encuentra copiado en el panel de la derecha, nos situamos encima del archivo y pulsamos en el panel inferior el número 6 "RenMov" (o pulsando en el teclado F6). Seguidamente, nos aparecere una ventana de diálogo donde para cambiar el nombre eliminamos todo lo que nos aparece en el campo to y le ponemos lo siguiente: 
 
 ```
 odoo.conf
 ```
 
-*Ventana dialogo antes de cambiar el nombre*
+*Ventana diálogo antes de cambiar el nombre*
 
 ![](images/2024-05-02-20-59-47-image.png)
 
-*Ventana dialogo despues de cambiar el nombre*
+*Ventana diálogo después de cambiar el nombre*
 
 ![](images/2024-05-02-21-00-42-image.png)
 
 Para aceptar el cambio de nombre pulsamos en "OK".
 
-Una vez cambiamos el nombre, seleccionamos (odoo.conf) y pulsmaos en el menú inferior al número 4 "Edit" o pulsamos F4 y nos aparecera los siguiente:
+Una vez cambiamos el nombre, seleccionamos (odoo.conf) y pulsamos en el menú inferior al número 4 "Edit" o pulsamos F4 y nos aparecerán los siguiente:
 
 ![](images/2024-05-03-12-43-07-image.png)
 
-Donde elefiremos la opción número 1 /bin/nano/ o lo que es lo mismo, seleccionamos nano porque es un editor de texto sencillo, fácil de usar y tiene funciones esenciales para editar archivos en un entorno de línea de comandos. Donde nos aparecerá la siguiente pantalla:
+Donde elegiremos la opción número 1 /bin/nano/ o lo que es lo mismo, seleccionamos nano porque es un editor de texto sencillo, fácil de usar y tiene funciones esenciales para editar archivos en un entorno de línea de comandos. Donde nos aparecerá la siguiente pantalla:
 
 ![](images/2024-05-03-12-48-47-image.png)
 
@@ -496,11 +496,11 @@ Una vez dentro del stack, seleccionamos los dos contenedores que hay creado "odo
 
 ![](images/2024-05-03-13-00-35-image.png)
 
-Una vez reiniciados los contenedores, es el momento de instalar los módulos OCA. Para ello volvemos nuevamente a nuestra consola donde en el panel de la izquierda deberemos de copiar el archivo 03. -modules_install_16 en el panel de la derecha en directorio data/compose/1/addons. Para ello en el panel de la derecha deberemos de subir de directorio pulsando en "/..". En este momento, deberiais de estar en una ventana parecida a la siguiente:
+Una vez reiniciados los contenedores, es el momento de instalar los módulos OCA. Para ello volvemos nuevamente a nuestra consola donde en el panel de la izquierda debemos copiar el archivo "03. -modules_install_16" en el panel de la derecha en directorio data/compose/1/addons. Para ello, en el panel de la derecha debemos subir de directorio pulsando en "/..". En este momento, deberíais estar en una ventana parecida a la siguiente:
 
 ![](images/2024-05-03-13-14-10-image.png)
 
-Seguidamente, accedeis a la carpeta "/addons" y dentro de esta carpeta será donde compiemos el archivo 03. -modules_install_16 del panel de la izquierda. Para copiar el archivo, nuevamente deberemos pulsar con el ratón en el número 5 "Copy" del panel inferior para copiar (o pulsando en el teclado la tecla F5) y nos aparecera una ventana de diálogo donde en esta ocasión dejaremos la ruta que nos aparece en "to" ya que en el panel de la derecha se encuentra dentro de la ruta que debe de estar (para saber en que ruta estamos debemos fijarnos en la ruta que nos aparece en la parte superior del panel que corresponda, en este caso en el panel de la derecha). Confirmado que la ruta que aparece en to es "/data/compose/1/addons/", pulsaremos en el botón "OK".
+Seguidamente, accedéis a la carpeta "/addons" y dentro de esta carpeta será donde copiemos el archivo 03. -modules_install_16 del panel de la izquierda. Para copiar el archivo, nuevamente debemos pulsar con el ratón en el número 5 "Copy" del panel inferior para copiar (o pulsando en el teclado la tecla F5) y nos aparecerá una ventana de diálogo donde en esta ocasión dejaremos la ruta que nos aparece en "to" ya que en el panel de la derecha se encuentra dentro de la ruta que debe estar (para saber en que ruta estamos debemos fijarnos en la ruta que nos aparece en la parte superior del panel que corresponda, en este caso en el panel de la derecha). Confirmado que la ruta que aparece en to es "/data/compose/1/addons/", pulsaremos en el botón "OK".
 
 ![](images/2024-05-03-13-28-04-image.png)
 
@@ -604,11 +604,11 @@ Una vez dentro de la consola volvemos a ejecutar Midnight Commander.
 mc
 ```
 
-Una vez dentro, nos situamos en el panel de la izquierda accederemos al directorio /root/Install-Odoo/modules_install_16 y, después, nos situamos en el derecho y accedemos a la ruta /data/compose/1/addons. Para este caso debemos acceder al nivel superior pulsando en "/.." para que nos aparezca la carpeta "data". PAra comprobar que estamos en la ruta correcta solo nos debemos fijar en la ruta que nos aparece en la parte superior de cada panel.
+Una vez dentro, nos situamos en el panel de la izquierda, accederemos al directorio /root/Install-Odoo/modules_install_16 y, después, nos situamos en el derecho y accedemos a la ruta /data/compose/1/addons. Para este caso, debemos acceder al nivel superior pulsando en "/.." para que nos aparezca la carpeta "data". Para comprobar que estamos en la ruta correcta solo nos debemos fijar en la ruta que nos aparece en la parte superior de cada panel.
 
 ![](images/2024-05-05-12-29-06-image.png)
 
-Una vez confirmado que estamos en la ruta correcta copiamos el archivo "./10.-requirements_oca.sh" que se encuentra en el panel de la izquierda y lo copiamos al panel de la derecha (Para copiar o pulsamos en el panel inferior el número 5 Copy o pulsamos F5). Para comprobar que se ha copiado correctamente, nos situamos en el panel de la derecha y bajamos al final de este panel donde encontraremos el archivo recien copiado.
+Una vez confirmado que estamos en la ruta correcta copiamos el archivo "./10.-requirements_oca.sh" que se encuentra en el panel de la izquierda y lo copiamos al panel de la derecha (Para copiar o pulsamos en el panel inferior el número 5 Copy o pulsamos F5). Para comprobar que se ha copiado correctamente, nos situamos en el panel de la derecha y bajamos al final de este panel donde encontraremos el archivo recién copiado.
 
 ![](images/2024-05-05-12-34-06-image.png)
 
@@ -628,7 +628,7 @@ cd /root/Install-Odoo/modules_install_16
 chmod +x 10.-requirements_oca.sh
 ```
 
-Seguidamente, accedemos nuevamente Midnight Commander y en el panel de la izquierda accedemos a la ruta "/data/compose/1/addons". Para acceder a la ruta deberemos de pulsar en "/.." tantas veces como sea necesario para acceder a la carpeta raiz y no nos aparezca el símbolo "/.." para que se nos muestre la carpeta "data"
+Seguidamente, accedemos nuevamente Midnight Commander y en el panel de la izquierda accedemos a la ruta "/data/compose/1/addons". Para acceder a la ruta debemos pulsar en "/.." tantas veces como sea necesario para acceder a la carpeta raíz y no nos aparezca el símbolo "/.." para que se nos muestre la carpeta "data"
 
 ```
 mc
@@ -638,27 +638,27 @@ Nuevamente, nos fijamos en el menú superior del panel izquierdo para corroborar
 
 ![](images/2024-05-05-12-55-34-image.png)
 
-Una vez que estemos en la ruta deberemos de crear un nuevo directorio pulsando en el menú inferior el número 7 "Mkdir" o pulsando F7. A este nuevo directorio le llamaremos "otros". **Importante, al crear el directorio evitar encontraros encima de ningún archivo, hacedlo cuando tengais seleccionado "/..". De esta manera, podreis evitar posibles problemas.**
+Una vez que estemos en la ruta debemos crear un nuevo directorio pulsando en el menú inferior el número 7 "Mkdir" o pulsando F7. A este nuevo directorio le llamaremos "otros". **Importante, al crear el directorio evitar encontraros encima de ningún archivo, hacedlo cuando tengais seleccionado "/..". De esta manera, podréis evitar posibles problemas.**
 
 ![](images/2024-05-05-12-58-40-image.png)
 
-Creada la carpeta salimos de Midnight Commander pulsando en el panel inferior en el número 10 "Quit" o pulsando en F10. Y una vez quitado Midnight Commander, hacemos en la consola un reboot.
+Creada la carpeta, salimos de Midnight Commander pulsando en el panel inferior en el número 10 "Quit" o pulsando en F10. Y una vez quitado Midnight Commander, hacemos en la consola un reboot.
 
 ```
 reboot
 ```
 
-Seguidamente, accedemos a Portainer donde deberemos de introducir de nuevo las credenciales debido al reboot. Si no la pide, recargar la página para que os echen y os la pida.
+Seguidamente, accedemos a Portainer donde debemos introducir de nuevo las credenciales debido al reboot. Si no la pide, recargar la página para que os echen y os la pida.
 
-Una vez que accedais a Portainer, entrais en vuestro environments "local" y accedeis a containers donde podreis acceder mediante el acceso directo que aparece en el dashboard o mediante el panel lateral izquierdo.
+Una vez que accedáis a Portainer, entráis en vuestro environments "local" y accedéis a containers donde podréis acceder mediante el acceso directo que aparece en el dashboard o mediante el panel lateral izquierdo.
 
 ![](images/2024-05-05-13-07-33-image.png)
 
-Una vez dentro, seleccionais vuestro container "odoo16-web-1" y pulsais en el botón superior "Restart"
+Una vez dentro, seleccionáis vuestro container "odoo16-web-1" y pulsáis en el botón superior "Restart"
 
 ![](images/2024-05-05-13-10-23-image.png)
 
-Una vez instaladas la librería de apoyo ya podremos acceder al Odoo vía IP con el puerto 8069 o 8072.
+Una vez instaladas las librerías de apoyo, ya podremos acceder al Odoo vía IP con el puerto 8069 o 8072.
 
 La contraseña maestra de vuestro Odoo será 00000000
 
@@ -670,7 +670,7 @@ Podemos acceder al configurar el Nginx a través del container nginx-app-1 hacie
 
 ![](images/2024-05-05-13-19-04-image.png)
 
-Al acceder a Nginx nos pedira las credenciales de acceso:
+Al acceder a Nginx nos pedirá las credenciales de acceso:
 
 email: admin@example.com
 
@@ -690,11 +690,11 @@ Una vez cambiada la contraseña accederemos a Hosts/Proxy Hosts que será donde 
 
 ![](images/2024-05-06-09-51-58-image.png)
 
-Una vez dentro de esta sección, para añadir los distintos registros A para posteriormente crear sus certificados SSL, debemos de pulsar en el botón "Add Proxy Host".
+Una vez dentro de esta sección, para añadir los distintos registros A para posteriormente crear sus certificados SSL, debemos pulsar en el botón "Add Proxy Host".
 
 ![](images/2024-05-06-09-54-00-image.png)
 
-Al pulsar este botón nos aparecera una ventana emergente donde deberemos añadir en "Domain Names" el registro A generado en Excel, en "Forward Hostname / IP" será la IP generada por nuestro servidor Hetzner y el "Forward Port" y, por último, dejamos seleccionado "Block Common Exploits".
+Al pulsar este botón nos aparecerá una ventana emergente donde debemos añadir en "Domain Names" el registro A generado en Excel, en "Forward Hostname / IP" será la IP generada por nuestro servidor Hetzner y el "Forward Port" y, por último, dejamos seleccionado "Block Common Exploits".
 
 A continuación, veremos como se añade cada uno de los registros A que debemos añadir para el Odoo que estamos levantando.
 
@@ -746,7 +746,7 @@ A continuación, crearemos certificado SSL a cada uno de los registros A. Para e
 
 ![](images/2024-05-06-11-37-16-image.png)
 
-- Cetificado SSL para el registro A de Odoo: En la pantalla emergente que nos aparece, pulsamos en el botón SSL y en el despegable "SSL Certificate" y seleccionamos "Request a new SSL Certificate". Por último, seleccionamos "Force SSL" y "I Agree to the Let's Encrypt Terms of Service". El apartado "Email Address for Let's Encrypt" dejamos el correo que viene por defecto, el cual será el correo que nos ha proporcionado Data Control para esta tarea y será el mismo que le indicamos a NGinx en la activación. Finalizada la configuración guardamos los cambios pulsando en el botón "Save".
+- Certificado SSL para el registro A de Odoo: En la pantalla emergente que nos aparece, pulsamos en el botón SSL y en el despegable "SSL Certificate" y seleccionamos "Request a new SSL Certificate". Por último, seleccionamos "Force SSL" y "I Agree to the Let's Encrypt Terms of Service". El apartado "Email Address for Let's Encrypt" dejamos el correo que viene por defecto, el cual será el correo que nos ha proporcionado Data Control para esta tarea y será el mismo que le indicamos a NGinx en la activación. Finalizada la configuración guardamos los cambios pulsando en el botón "Save".
 
 ![](images/2024-05-06-11-42-07-image.png)
 
