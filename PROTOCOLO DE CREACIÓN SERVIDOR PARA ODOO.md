@@ -758,4 +758,4 @@ Realizamos la misma operación con el resto de registro A. Una vez se hayan agre
 
 Para la creación de la base de datos de Odoo hay que tener en cuenta que la contraseña maestra es siempre 00000000 y el nombre de la base de datos debe ser el nombre del subdominio creado en este caso dwits-prueba 
 
-![](C:\Users\manue\AppData\Roaming\marktext\images\2024-05-07-10-14-31-image.png)
+![](images/2024-05-07-10-14-31-image.png)
