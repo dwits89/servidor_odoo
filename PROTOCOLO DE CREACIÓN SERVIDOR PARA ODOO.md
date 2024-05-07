@@ -742,7 +742,7 @@ Una vez añadido los registros A tendremos el siguiente panel:
 
 ![](images/2024-05-06-10-24-45-image.png)
 
-A continuación, crearemos certificado SSL a cada uno de los registros A. Para ello nos situaremos en el registro A que le vamos a crear el registro A y pulsamos en los tres puntitos y le damos a "Edit". 
+A continuación, crearemos certificado SSL a cada uno de los registros A. Para ello nos situaremos en el registro A que le vamos a crear el certificado SSL y pulsamos en los tres puntitos y le damos a "Edit". 
 
 ![](images/2024-05-06-11-37-16-image.png)
 
@@ -753,3 +753,9 @@ A continuación, crearemos certificado SSL a cada uno de los registros A. Para e
 Realizamos la misma operación con el resto de registro A. Una vez se hayan agregado los hosts podremos fijarnos que la columna SSL aparecerá "Let's Encrypt":
 
 ![](images/2024-05-06-11-46-30-image.png)
+
+## 8. Creación base de datos de Odoo
+
+Para la creación de la base de datos de Odoo hay que tener en cuenta que la contraseña maestra es siempre 00000000 y el nombre de la base de datos debe ser el nombre del subdominio creado en este caso dwits-prueba 
+
+![](C:\Users\manue\AppData\Roaming\marktext\images\2024-05-07-10-14-31-image.png)
