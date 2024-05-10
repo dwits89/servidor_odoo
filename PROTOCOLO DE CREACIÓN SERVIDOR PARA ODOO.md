@@ -169,87 +169,11 @@ Una vez ejecutado el comando se desconectará nuestro terminal debiendo  conecta
 
 ![](images/2024-05-02-14-49-10-image.png)
 
-Iniciada la consola, debemos instalar una serie de librerías python que necesitamos para determinados módulos de Odoo. Estas librerías son: pysftp, schwifty, pycountry y cryptography.
+- Para ejecutar la consola pulsamos en "New Terminal console".
 
-- Para la instalación de estas librerías será necesario instalar Python 3:
+![](images/2024-05-05-12-47-49-image.png)
 
-```
-sudo apt install -y python3-pip
-```
 
-![](images/2024-05-08-12-35-29-image.png)
-
-![](images/2024-05-08-12-36-10-image.png)
-
-- Verificamos la instalación de 'pip3'
-
-```
-pip3 --version
-```
-
-![](images/2024-05-08-12-38-11-image.png)
-
-- Ahora, instalamos las librerías que necesitamos:
-
-```
-sudo pip3 install pysftp schwifty pycountry cryptography==3.4.8
-```
-
-![](images/2024-05-08-12-38-35-image.png)
-
-![](images/2024-05-08-12-39-30-image.png)
-
-- Siguiente, para poder importar la librería schwifty necesitamos instalar el módulo `typing_extensions`
-
-```
-sudo pip3 install typing-extensions
-```
-
-![](images/2024-05-08-12-51-49-image.png)
-
-- Ahora instalamos las librerías, iniciamos el interprete de Python:
-
-```
-python3
-```
-
-![](images/2024-05-08-12-43-57-image.png)
-
-- Ahora, importamos cada una de las líbrerias:
-  
-  - pysftp
-  
-  - schwifty
-  
-  - pycountry
-  
-  - cryptography
-
-```
-import pysftp
-```
-
-```
-import schwifty
-```
-
-```
-import pycountry
-```
-
-```
-import cryptography
-```
-
-![](images/2024-05-08-12-53-57-image.png)
-
-- Importada las librerías, salimos del entorno python:
-
-```
-exit()
-```
-
-![](images/2024-05-08-12-54-47-image.png)
 
 2. Clonación intalación Odoo
 
@@ -772,7 +696,25 @@ Recordad, para copiar las carpetas debemos pulsar en el botón inferior número 
 
 ![](images/2024-05-08-13-12-53-image.png)
 
-Una vez copiada todas las carpetas, pulsamos en el panel inferior al número 10 "Quit" o pulsamos en F10. Por último, reiniciamos el servidor con reboot.
+Una vez copiada todas las carpetas, pulsamos en el panel inferior al número 10 "Quit" o pulsamos en F10. 
+
+Una vez copiado nos aseguraramos que en el archivo **odoo.conf** su filtro **dbfilter = ^%d_.*** 
+
+Para ello, accedemos en el panel de la izquierda en el directorio data/compose/1/config donde tendremos acceso al archivo odoo.conf. Para acceder a este, nos situamos en el archivo y pulsamos en el panel inferior el número 4 "Edit" o pulsando F4.
+
+![](images/2024-05-10-11-23-28-image.png)
+
+Una vez dentro del archivo se cambia dbfilter=^%d$ por dbfilter = ^%d_.*
+
+- Archivo odoo.conf antes del cambio
+
+![](images/2024-05-10-11-33-23-image.png)
+
+- Archivo odoo.conf cambiando el fitro. En la imagén podréis ver como se realiza el cambio.
+
+![](images/2024-05-10-12-02-08-image.png)
+
+Una vez cambiado el archivo, salimos de Midnight Commander y reiniciamos el servidor con reboot.
 
 ```
 reboot
@@ -868,7 +810,73 @@ Realizamos la misma operación con el resto de registro A. Una vez se hayan agre
 
 ![](images/2024-05-06-11-46-30-image.png)
 
-## 8. Creación base de datos de Odoo
+## 8. Instalación de librerías python necesarias para algunos módulos de Odoo
+
+Lo primero que haremos será abrir el contenedor `odoo16-web-1` como usuario root para poder hacer las instalaciones necesarias.
+
+```
+docker exec -it --user root odoo16-web-1 bash
+```
+
+Después, instalamos la lista de paquetes e instala Python 3 pip.
+
+```
+ apt update && apt install -y python3-pip
+```
+
+![](images/2024-05-10-13-17-36-image.png)
+
+Ahora, instalamos el paquete `pysftp` para Python 3, que proporciona una interfaz simple para transferir archivos mediante SFTP (Secure File Transfer Protocol).
+
+```
+pip3 install pysftp
+```
+
+![](images/2024-05-10-13-18-00-image.png)
+
+Instalamos el paquete `schwifty` para Python 3, que facilita la validación y manejo de códigos IBAN y BIC en aplicaciones financieras.
+
+```
+pip3 install schwifty
+```
+
+![](images/2024-05-10-13-18-20-image.png)
+
+Siguiente, se reinstala forzosamente una versión específica (3.4.8) del paquete `cryptography` para Python 3, incluso si ya está instalado.
+
+```
+pip3 install cryptography==3.4.8 --force-reinstall
+```
+
+![](images/2024-05-10-13-20-06-image.png)
+
+Por último, instala las bibliotecas necesarias para trabajar con XML y HTML en Python. E instalamos el paquete `xmlsig` para Python 3, que proporciona soporte para la firma y validación de documentos XML según el estándar XML Signature (XMLDSIG).
+
+```
+apt update && apt install -y python3-lxml libxml2-dev libxslt-dev
+```
+
+![](images/2024-05-10-13-20-46-image.png)
+
+```
+pip3 install xmlsig
+```
+
+![](images/2024-05-10-13-21-03-image.png)
+
+```
+exit
+```
+
+```
+reboot
+```
+
+![](images/2024-05-10-13-21-44-image.png)
+
+saa
+
+## 9. Creación base de datos de Odoo
 
 Para la creación de la base de datos de Odoo hay que tener en cuenta que la contraseña maestra es siempre 00000000 y el nombre de la base de datos debe ser el nombre del subdominio creado en este caso dwits-prueba 
 
