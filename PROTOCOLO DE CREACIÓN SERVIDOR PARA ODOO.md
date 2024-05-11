@@ -173,8 +173,6 @@ Una vez ejecutado el comando se desconectará nuestro terminal debiendo  conecta
 
 ![](images/2024-05-05-12-47-49-image.png)
 
-
-
 2. Clonación intalación Odoo
 
 A continuación, utilizaremos el comando que utiliza Git clonar (copiar) el repositorio remoto llamado "Install-Odoo" desde GitHub al directorio local actual en tu máquina. Esto te permite obtener una copia local completa del repositorio para trabajar con ella offline o hacer modificaciones.
