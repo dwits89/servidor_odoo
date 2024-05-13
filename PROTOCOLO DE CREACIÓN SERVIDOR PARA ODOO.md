@@ -874,4 +874,98 @@ reboot
 
 ## 9. Creación base de datos de Odoo
 
-Para la creación de la base de datos de Odoo utilizaremos la copia de seguridad de la BBDD que corresponda según el servicio contratado.
+(Para este ejemplo se ha usado otra instalación de Odoo **lobo-digital**)
+
+Para la creación de la base de datos de Odoo apuntaremos las credenciales que usemos para facilitarsela posteriormente en el script que se ejecutará para instalar los módulos necesarios según el servicio que requiera el cliente.
+
+![](images/2024-05-13-17-23-18-image.png)
+
+- Master Password: será inicialmente la misma para todas las instalaciones Odoo que se realice 00000000
+
+- Database Name: su estructura será siempre el nombre del subdominio creado acompañado de una barra baja y una enumeración indicada. Ejemplo, esta instalacción de odoo el dominio es lobo-digital.datacontrolodoo.com, por lo tanto, el database name podría ser lobo-digital_01
+
+Una vez creada la base de datos de Odoo, acudiremos al siguiente repositorio git hub [servidor_odoo/Servicios at main · dwits89/servidor_odoo · GitHub](https://github.com/dwits89/servidor_odoo/tree/main/Servicios) y descargaremos el script del servicio que se le esté ofreciendo al cliente:
+
+![](images/2024-05-13-17-27-53-image.png)
+
+Ejemplo, en el caso que se vaya instalar a un cliente un odoo con facturación electrónica, gestión de proceso y gestión de cliente, el servicio corresponderá a Odoo-GP-GC-FE. Accedemos a está carpeta y descargamos el script que contiene.
+
+![](images/2024-05-13-17-29-51-image.png)
+
+Para descargar el script, pulsamos en install_modules.py y una vez abierto el archivo, lo descargamos.
+
+![](images/2024-05-13-17-32-47-image.png)
+
+Una vez descargado el fichero, lo editamos para facilitarle la configuración de nuestro Odoo.
+
+![](images/2024-05-13-17-36-03-image.png)
+
+Una vez editado el fichero con la configuración del Odoo que estamos isntalando, nos debemos de conectar por sftp al servidor.
+
+- Nos desconectamos del servidor pulsando en el botón "Log Out" (En caso que estuvieramos aún conectado de un paso anterior)
+  
+  ![](images/2024-05-02-19-32-51-image.png)
+
+- Nos volvemos a conectar al servidor pulsando en el botón "Log in".
+
+![](images/2024-05-05-12-14-08-image.png)
+
+Y nos conectamos por SFTP a nuestro servidor pulsando en "New SFTP window":
+
+![](images/2024-05-13-17-41-56-image.png)
+
+Al pulsar en este botón se nos abrira una nueva ventana con el SFTP, donde en el panel de la izquierda se encontrara nuestro ordenador y en la derecha el servidor. En el panel de la iziquierda daremos el directorio donde tengamos nuestro archivo script descargado y editado con la configuración, y en la pantalla de la derecha accederemos al directorio /opt
+
+![](images/2024-05-13-17-45-01-image.png)
+
+En el panel de la derecha creamos una carpeta que llamaremos scripts y será donde subamos nuestro archivo script. Muy importante, el archivo script que subamos siempre tendrá que tener el nombre install_modules.py
+
+![](images/2024-05-13-17-47-34-image.png)
+
+Archivo subido en el directorio /opt/scripts:
+
+![](images/2024-05-13-17-48-43-image.png)
+
+Una vez subido el fichero, es momento de ejecutar el script en nuestra consola. Para ello abrimos una consola:
+
+![](images/2024-05-05-12-48-12-image.png)
+
+Seguidamente, nos situamos en el directorio que encuentra el script:
+
+```
+cd /opt/scripts
+```
+
+Otorgamos permisos de ejecución al fichero que contiene el script:
+
+```
+sudo chmod +x install_modules.py
+```
+
+![](images/2024-05-13-17-52-36-image.png)
+
+Y ejecutamos el script:
+
+```
+python3 /opt/scripts/install_modules.py
+```
+
+Si todo ha ido correctamente aparecerá el siguiente mensaje. 
+
+![](images/2024-05-13-18-08-46-image.png)
+
+Sí alguno de los módulo no ha podido instalarse, se te indicará cual ha sido dando el nombre técnico. Dado ese caso, se tendrá que instalar manualmente.
+
+Para dar por finalizada la instalación de Odoo, se debe de instalar manualmente los tres siguientes módulo:
+
+- l10n_es_partner 
+
+- l10n_es_facturae
+
+- login_user_detail
+
+El módulo l10n_es_partner pedirá donde tomar los datos, donde se indicará que lo importe desde internet:
+
+![](images/2024-05-13-18-12-47-image.png)
+
+Por último, cuando el cliente solo quiere el servicio gestión de cliente (GC), únicamente se instalará el modulo login_user_detail, dejando l10n_es_partner y l10n_es_facturae, sin instalar.
