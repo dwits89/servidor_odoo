@@ -3,9 +3,9 @@ from time import sleep
 
 # Configuración
 url = "http://localhost:8069"
-db = "dwits_gc"
-username = 'manuel.sanchez@ext.datacontrol.es'
-password = 'hm27bq2NZedtg2c'
+db = "xxxx"
+username = 'xxxx'
+password = 'xxxx'
 
 # Obtiene la información común
 common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
