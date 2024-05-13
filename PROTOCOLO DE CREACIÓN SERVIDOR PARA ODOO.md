@@ -876,7 +876,7 @@ reboot
 
 (Para este ejemplo se ha usado otra instalación de Odoo **lobo-digital**)
 
-Para la creación de la base de datos de Odoo apuntaremos las credenciales que usemos para facilitarsela posteriormente en el script que se ejecutará para instalar los módulos necesarios según el servicio que requiera el cliente.
+Para la creación de la base de datos de Odoo apuntaremos las credenciales que usemos para facilitársela posteriormente en el script que se ejecutará para instalar los módulos necesarios según el servicio que requiera el cliente.
 
 ![](images/2024-05-13-17-23-18-image.png)
 
@@ -900,7 +900,7 @@ Una vez descargado el fichero, lo editamos para facilitarle la configuración de
 
 ![](images/2024-05-13-17-36-03-image.png)
 
-Una vez editado el fichero con la configuración del Odoo que estamos isntalando, nos debemos de conectar por sftp al servidor.
+Una vez editado el fichero, con la configuración del Odoo que estamos instalando, nos debemos conectar por sftp al servidor.
 
 - Nos desconectamos del servidor pulsando en el botón "Log Out" (En caso que estuvieramos aún conectado de un paso anterior)
   
@@ -914,11 +914,11 @@ Y nos conectamos por SFTP a nuestro servidor pulsando en "New SFTP window":
 
 ![](images/2024-05-13-17-41-56-image.png)
 
-Al pulsar en este botón se nos abrira una nueva ventana con el SFTP, donde en el panel de la izquierda se encontrara nuestro ordenador y en la derecha el servidor. En el panel de la iziquierda daremos el directorio donde tengamos nuestro archivo script descargado y editado con la configuración, y en la pantalla de la derecha accederemos al directorio /opt
+Al pulsar en este botón, se nos abrirá una nueva ventana con el SFTP, donde en el panel de la izquierda se encontrará nuestro ordenador y en la derecha el servidor. En el panel de la iziquierda daremos el directorio donde tengamos nuestro archivo script descargado y editado con la configuración, y en la pantalla de la derecha accederemos al directorio /opt
 
 ![](images/2024-05-13-17-45-01-image.png)
 
-En el panel de la derecha creamos una carpeta que llamaremos scripts y será donde subamos nuestro archivo script. Muy importante, el archivo script que subamos siempre tendrá que tener el nombre install_modules.py
+En el panel de la derecha, creamos una carpeta que llamaremos scripts y será donde subamos nuestro archivo script. Muy importante, el archivo script que subamos siempre tendrá que tener el nombre install_modules.py
 
 ![](images/2024-05-13-17-47-34-image.png)
 
@@ -956,7 +956,7 @@ Si todo ha ido correctamente aparecerá el siguiente mensaje.
 
 Sí alguno de los módulo no ha podido instalarse, se te indicará cual ha sido dando el nombre técnico. Dado ese caso, se tendrá que instalar manualmente.
 
-Para dar por finalizada la instalación de Odoo, se debe de instalar manualmente los tres siguientes módulo:
+Para dar por finalizada la instalación de Odoo, se debe instalar manualmente los tres siguientes módulo:
 
 - l10n_es_partner 
 
@@ -964,7 +964,7 @@ Para dar por finalizada la instalación de Odoo, se debe de instalar manualmente
 
 - login_user_detail
 
-El módulo l10n_es_partner pedirá donde tomar los datos, donde se indicará que lo importe desde internet:
+El módulo l10n_es_partner pedirá dónde tomar los datos, donde se indicará que lo importe desde internet:
 
 ![](images/2024-05-13-18-12-47-image.png)
 
