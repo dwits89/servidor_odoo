@@ -872,10 +872,6 @@ reboot
 
 ![](images/2024-05-10-13-21-44-image.png)
 
-saa
-
 ## 9. Creación base de datos de Odoo
 
-Para la creación de la base de datos de Odoo hay que tener en cuenta que la contraseña maestra es siempre 00000000 y el nombre de la base de datos debe ser el nombre del subdominio creado en este caso dwits-prueba 
-
-![](images/2024-05-07-10-14-31-image.png)
+Para la creación de la base de datos de Odoo utilizaremos la copia de seguridad de la BBDD que corresponda según el servicio contratado.
