@@ -835,7 +835,7 @@ pip3 install pysftp
 Instalamos el paquete `schwifty` para Python 3, que facilita la validación y manejo de códigos IBAN y BIC en aplicaciones financieras.
 
 ```
-pip3 install schwifty
+pip3 install schwifty==2024.4.0
 ```
 
 ![](images/2024-05-10-13-18-20-image.png)
