@@ -163,6 +163,10 @@ También, os podría indicar que actualizase a una nueva versión de kernel:
 
 ![](images/2024-05-16-14-08-25-image.png)
 
+Donde os indicará que algunos servicios están utilizando bibliotecas desactualizadas y necesitan ser reiniciados para aplicar las actualizaciones. Lo mejor es dejar los servicios seleccionados por defecto y proceder.
+
+![](C:\Users\manue\AppData\Roaming\marktext\images\2024-05-16-14-15-52-image.png)
+
 De una forma u otra, realizamos un reinicio del sistema operativo de manera segura y ordenada con el siguiente comando:
 
 ```
