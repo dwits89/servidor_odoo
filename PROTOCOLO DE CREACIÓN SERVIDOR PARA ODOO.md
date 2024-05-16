@@ -236,7 +236,7 @@ ls
 htop
 ```
 
-<img title="" src="file:///C:/Users/manue/AppData/Roaming/marktext/images/2024-05-02-17-50-40-image.png" alt="" data-align="center" width="715">
+![](images/2024-05-02-17-50-40-image.png)
 
 Para salir de esta ventana pulsamos en el teclado F10 o Ctrl + C
 
