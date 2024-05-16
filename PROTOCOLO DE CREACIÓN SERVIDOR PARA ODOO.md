@@ -159,7 +159,11 @@ Una vez finalizada la tarea, nos solicita que reiniciemos los servicios marcados
 
 ![](images/2024-05-02-14-35-50-image.png)
 
-Si no os salierá esta ventana no os preocupeis, ya que salga o no esta ventana realizamos un reinicio del sistema operativo de manera segura y ordenada con el siguiente comando:
+También, os podría indicar que actualizase a una nueva versión de kernel:
+
+![](images/2024-05-16-14-08-25-image.png)
+
+De una forma u otra, realizamos un reinicio del sistema operativo de manera segura y ordenada con el siguiente comando:
 
 ```
 reboot
