@@ -225,7 +225,7 @@ ls
 - Ejecutamos el script llamado "01.-makeswap.sh", el cual está diseñado para realizar configuraciones específicas, como configurar espacio de swap. El espacio swap es una sección del disco duro que el sistema operativo utiliza como una extensión de la memoria RAM. Cuando la RAM se llena, el sistema puede mover datos temporales a este espacio swap para liberar memoria RAM y seguir funcionando sin problemas. En resumen, el espacio de swap actúa como un "colchón" de seguridad que ayuda a manejar situaciones de alto uso de memoria, lo que es especialmente importante en servidores o sistemas que ejecutan aplicaciones que consumen muchos recursos.
 
 ```
-./01.-makeswap.sh
+./03.-makeswap.sh
 ```
 
 ![](images/2024-05-02-17-44-56-image.png)
