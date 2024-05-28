@@ -977,3 +977,17 @@ El módulo l10n_es_partner pedirá dónde tomar los datos, donde se indicará qu
 ![](images/2024-05-13-18-12-47-image.png)
 
 Por último, cuando el cliente solo quiere el servicio gestión de cliente (GC), únicamente se instalará el modulo login_user_detail, dejando l10n_es_partner y l10n_es_facturae, sin instalar.
+
+Finalizada la instalación, se accede al servidor de Hetzner y se crea una regla de Firewall donde la configuración debe ser la siguiente:
+
+![](images/2024-05-28-13-51-47-image.png)
+
+![](images/2024-05-28-13-14-05-image.png)
+
+Una vez creada, accederemos a la maquina del cliente y le asignamos la regla que hemos creado (Esta regla solo se tendrá que crear una vez y ser usada para el resto de clientes)
+
+![](images/2024-05-28-13-54-37-image.png)
+
+![](images/2024-05-28-13-56-39-image.png)
+
+Para que nos aparezca esta regla en la maquina seleccionada, debemos de esperar un par de minutos. (La mayoría de las veces se debe de recargar la página para que nos aparezca)
