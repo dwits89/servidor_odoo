@@ -672,8 +672,6 @@ Una vez dentro, seleccionáis vuestro container "odoo16-web-1" y pulsáis en el 
 
 Una vez instaladas las librerías de apoyo, ya podremos acceder al Odoo vía IP con el puerto 8069 o 8072.
 
-La contraseña maestra de vuestro Odoo será 00000000
-
 Aunque antes de realizar la creación de la base de datos de Odoo, realizaremos la Instalación NGINX Proxy Manager y copiaremos unos módulos extras que serán necesarios en Odoo.
 
 Primero, copiaremos estos módulos extras y, para ello, volvemos a la consola y entramos en Midnight Commander.
@@ -704,21 +702,23 @@ Recordad, para copiar las carpetas debemos pulsar en el botón inferior número 
 
 Una vez copiada todas las carpetas, pulsamos en el panel inferior al número 10 "Quit" o pulsamos en F10. 
 
-Una vez copiado nos aseguraramos que en el archivo **odoo.conf** su filtro **dbfilter = ^%d_.*** 
+Una vez copiado nos aseguraramos que en el archivo **odoo.conf** su filtro **dbfilter = %d** 
 
 Para ello, accedemos en el panel de la izquierda en el directorio data/compose/1/config donde tendremos acceso al archivo odoo.conf. Para acceder a este, nos situamos en el archivo y pulsamos en el panel inferior el número 4 "Edit" o pulsando F4.
 
 ![](images/2024-05-10-11-23-28-image.png)
 
-Una vez dentro del archivo se cambia dbfilter=^%d$ por dbfilter = ^%d_.*
+Una vez dentro del archivo se crea el filtro dbfilter=%d sin comentar y dejando los tres que ya estaba comentado (para comentar se añade punto y coma antes del filtro).
 
-- Archivo odoo.conf antes del cambio
+Además, se cambia la contraseña del filtro admin_passwd = 00000000 por otra contraseña de ochos caracteres o más, generado por un generador de contraseñas. (Podemos usar el generador https://www.lastpass.com/es/features/password-generator ). Esta contraseña será la que usemos posteriormente como contraseña maestra de la base de datos del odoo que estáis montando.
 
-![](images/2024-05-10-11-33-23-image.png)
+Por otro lado, cambiamos los siguientes filtros y lo dejamos sin comentar:
 
-- Archivo odoo.conf cambiando el fitro. En la imagén podréis ver como se realiza el cambio.
+- limit_time_real = 600
 
-![](images/2024-05-10-12-02-08-image.png)
+- quitamos el comentario al filtro workers = 2
+
+![](images/2024-05-31-18-56-57-image.png)
 
 Una vez cambiado el archivo, salimos de Midnight Commander y reiniciamos el servidor con reboot.
 
@@ -888,9 +888,9 @@ Para la creación de la base de datos de Odoo apuntaremos las credenciales que u
 
 ![](images/2024-05-13-17-23-18-image.png)
 
-- Master Password: será inicialmente la misma para todas las instalaciones Odoo que se realice 00000000
+- Master Password: la contraseña será la usada por un generador de contraseña, nunca deberemos de usar la contraseña de los 8 ceros.
 
-- Database Name: su estructura será siempre el nombre del subdominio creado acompañado de una barra baja y una enumeración indicada. Ejemplo, esta instalacción de odoo el dominio es lobo-digital.datacontrolodoo.com, por lo tanto, el database name podría ser lobo-digital_01
+- Database Name: su estructura será siempre el nombre del dominio. Ejemplo, esta instalacción de odoo el dominio es lobo-digital.datacontrolodoo.com, por lo tanto, el database name será lobo-digital.datacontrolodoo.com
 
 Una vez creada la base de datos de Odoo, acudiremos al siguiente repositorio git hub [servidor_odoo/Servicios at main · dwits89/servidor_odoo · GitHub](https://github.com/dwits89/servidor_odoo/tree/main/Servicios) y descargaremos el script del servicio que se le esté ofreciendo al cliente:
 
@@ -977,6 +977,10 @@ El módulo l10n_es_partner pedirá dónde tomar los datos, donde se indicará qu
 ![](images/2024-05-13-18-12-47-image.png)
 
 Por último, cuando el cliente solo quiere el servicio gestión de cliente (GC), únicamente se instalará el modulo login_user_detail, dejando l10n_es_partner y l10n_es_facturae, sin instalar.
+
+Instalados los addons que faltaban de forma manual, volvemos a la consola y entramos en Midnight Commander para modificar nuevamente el archivo odoo.conf (su ruta es /data/compose/1/config) donde se modificará el filtro list_db = False y se deja sin comentar. Con esto cambio, ocultaremos en el panel de iniciar sesión de Odoo la gestión de base de datos. de esta manera, crearemos una medida de seguridad para evitar que conozcan la contraseña maestra de la base de datos mediante fuerza bruta.
+
+![](images/2024-05-31-19-11-58-image.png)
 
 Finalizada la instalación, se accede al servidor de Hetzner y se crea una regla de Firewall donde la configuración debe ser la siguiente:
 
