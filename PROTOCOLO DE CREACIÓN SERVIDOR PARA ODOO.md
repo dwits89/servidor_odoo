@@ -980,7 +980,7 @@ Por último, cuando el cliente solo quiere el servicio gestión de cliente (GC),
 
 Instalados los addons que faltaban de forma manual, volvemos a la consola y entramos en Midnight Commander para modificar nuevamente el archivo odoo.conf (su ruta es /data/compose/1/config) donde se modificará el filtro list_db = False y se deja sin comentar. Con esto cambio, ocultaremos en el panel de iniciar sesión de Odoo la gestión de base de datos. de esta manera, crearemos una medida de seguridad para evitar que conozcan la contraseña maestra de la base de datos mediante fuerza bruta.
 
-![](images/2024-05-31-19-11-58-image.png)
+![](images/Gestión BBDD oculto.png)
 
 Finalizada la instalación, se accede al servidor de Hetzner y se crea una regla de Firewall donde la configuración debe ser la siguiente:
 
