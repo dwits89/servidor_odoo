@@ -676,8 +676,6 @@ Una vez cambiado el correo nos pedirá que cambiemos la contraseña.
 
 Una vez cambiada la contraseña anotaremos la url y las credenciales de acceso para facilitarsela a los implementadores. La url siempre se corresponderá a la IP del servidor seguido de 81. Siguiendo nuestro ejemplo, la url es 49.13.214.246:81
 
-
-
 ## 7. Instalación de librerías python necesarias para algunos módulos de Odoo
 
 Lo primero que haremos será abrir el contenedor `odoo16-web-1` como usuario root para poder hacer las instalaciones necesarias.
